@@ -235,7 +235,7 @@
         <!-- Compte à rebours -->
         <section class="card">
             <h2>⏳ Compte à rebours festif</h2>
-            <p>Le grand jour arrive demain ! Suis le signal thermique en direct :</p>
+            <p>C'est le grand jour ! Profite à fond de ton anniversaire :</p>
             <div class="countdown-container">
                 <div class="countdown-item"><span id="days">00</span><label>Jours</label></div>
                 <div class="countdown-item"><span id="hours">00</span><label>Heures</label></div>
@@ -337,11 +337,13 @@
             <h2>✍️ Le mot de la conceptrice</h2>
             <div class="message-box-unique">
                 ✨ <strong>Murielle Gloire :</strong>
-                🔥 <strong>Infrarouge, le grand jour est enfin là !</strong>
+                🔥 <strong>Joyeux anniversaire à toi, Infrarouge !</strong> 🚀✨
 
-                Te voilà officiellement propulsé dans cette nouvelle année et dans ta troisième année à l'UDSN. Entre l'énergie que tu as déployée pour le concours de l'EMHE et la philosophie de la bicytocratie qui nous apprend à toujours pédaler pour garder l'équilibre, une chose est sûre : tu rayonnes sur une fréquence bien à toi, faite de brio, d'acuité et d'ambition.
+                Il y a des personnes qui traversent les projets en laissant une empreinte lumineuse, et tu en fais partie.
 
-                Que cette journée te renvoie toutes les bonnes ondes que tu diffuses autour de toi, avec de l'inspiration à revendre et un succès éclatant pour tout ce qui t'attend. Passe une magnifique et inoubliable journée ! 🚀✨🚴🏼
+                Entre l'exigence de ta troisième année à l'UDSN et l'art subtil de la bicycocratie pour garder l'équilibre en toutes circonstances, tu forces l'admiration. Que le Tout-Puissant te garde, veille sur tes pas et t'accorde une longue et belle vie remplie de santé et de paix.
+
+                Puisses-tu continuer à inspirer, créer et avancer avec cette même passion vers un succès toujours plus grand. Profite à fond de ton jour J ! 🥂🎂
             </div>
         </section>
 
@@ -352,13 +354,10 @@
     </footer>
 
     <script>
-        // --- LOGIQUE DU COMPTE À REBOURS (Cible : Demain à 00:00:00) ---
+        // --- LOGIQUE DU COMPTE À REBOURS (Cible : Aujourd'hui le 11 novembre 2026) ---
         function updateCountdown() {
-            const tomorrow = new Date();
-            tomorrow.setDate(tomorrow.getDate() + 1);
-            tomorrow.setHours(0, 0, 0, 0);
-            
-            const targetDate = tomorrow.getTime();
+            // Cible fixée au jour J (11 novembre 2026) pour afficher directement le Jour J
+            const targetDate = new Date("November 11, 2026 00:00:00").getTime();
             const now = new Date().getTime();
             const difference = targetDate - now;
 
@@ -373,10 +372,10 @@
                 document.getElementById("minutes").innerText = minutes < 10 ? "0" + minutes : minutes;
                 document.getElementById("seconds").innerText = seconds < 10 ? "0" + seconds : seconds;
             } else {
-                document.querySelector(".countdown-container").innerHTML = "<h3 style='color:#ffaa00;'>🎉 C'EST LE JOUR J ! PROFITE À FOND ! 🎉</h3>";
+                // S'affiche immédiatement puisque c'est le jour J !
+                document.querySelector(".countdown-container").innerHTML = "<h3 style='color:#ffaa00; text-align:center; width:100%; margin:0;'>🎉 C'EST LE JOUR J ! PROFITE À FOND ! 🎉</h3>";
             }
         }
-        setInterval(updateCountdown, 1000);
         updateCountdown();
 
         // --- ANIMATION DES ÉTINCELLES THERMIQUES EN ARRIÈRE-PLAN ---
